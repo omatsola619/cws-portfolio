@@ -40,15 +40,15 @@ const Contact = () => {
         // fData.append('message', message)
 
         const emailData = {
-            first_name: firstName,
+            from_name: firstName + ' ' + lastName,
             last_name: lastName,
-            email: email,
+            from_email: email,
             phone_number: phone,
             message: message,
         };
 
         // Use EmailJS to send the email
-        emailjs.send('service_68rvug8', 'template_j8iua08', emailData,  'VPSQLe7H-2t5aGBdD')
+        emailjs.send('service_68rvug8', 'template_hdcoafk', emailData,  'VPSQLe7H-2t5aGBdD')
             .then((response) => {
                 document.getElementById('submitBtn').disabled = false;
                 document.getElementById('submitBtn').innerHTML = 'Send Message';
